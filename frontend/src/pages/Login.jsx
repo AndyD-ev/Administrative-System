@@ -16,9 +16,11 @@ export default function Login() {
         "http://localhost:3000/auth/login",
         {
           method: "POST",
+
           headers: {
             "Content-Type": "application/json"
           },
+
           body: JSON.stringify({
             email,
             password
@@ -27,8 +29,6 @@ export default function Login() {
       )
 
       const data = await res.json()
-
-      console.log(data)
 
       if (data.token) {
 
@@ -55,36 +55,106 @@ export default function Login() {
 
   return (
 
-    <div>
+    <div style={styles.page}>
 
-      <h1>Login</h1>
+      <div style={styles.card}>
 
-      <input
-        type="email"
-        placeholder="Correo"
-        onChange={(e) =>
-          setEmail(e.target.value)
-        }
-      />
+        <h1 style={styles.title}>
+          Employee <br />
+          <span style={{
+            color: "#2563eb"
+          }}>
+           <br /> System
+          </span>
+        </h1>
 
-      <br /><br />
+        <p style={styles.subtitle}>
+          Inicia sesión para continuar
+        </p>
 
-      <input
-        type="password"
-        placeholder="Contraseña"
-        onChange={(e) =>
-          setPassword(e.target.value)
-        }
-      />
+        <input
+          style={styles.input}
+          type="email"
+          placeholder="Correo"
+          onChange={(e) =>
+            setEmail(e.target.value)
+          }
+        />
 
-      <br /><br />
+        <input
+          style={styles.input}
+          type="password"
+          placeholder="Contraseña"
+          onChange={(e) =>
+            setPassword(e.target.value)
+          }
+        />
 
-      <button onClick={handleLogin}>
-        Entrar
-      </button>
+        <button
+          style={styles.button}
+          onClick={handleLogin}
+        >
+          Entrar
+        </button>
+
+      </div>
 
     </div>
 
   )
+
+}
+
+const styles = {
+
+  page: {
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#f1f5f9",
+    fontFamily: "Arial"
+  },
+
+  card: {
+    width: "350px",
+    background: "white",
+    padding: "40px",
+    borderRadius: "20px",
+    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px"
+  },
+
+  title: {
+    textAlign: "center",
+    marginBottom: "40px",
+    color: "#0f172a"
+  },
+
+  subtitle: {
+    textAlign: "center",
+    color: "#64748b",
+    marginBottom: "-1px"
+  },
+
+  input: {
+    padding: "12px",
+    borderRadius: "10px",
+    border: "1px solid #cbd5e1",
+    fontSize: "15px"
+  },
+
+  button: {
+    background: "#2563eb",
+    color: "white",
+    border: "none",
+    padding: "12px",
+    borderRadius: "10px",
+    fontSize: "15px",
+    cursor: "pointer",
+    marginTop: "10px"
+  }
 
 }
