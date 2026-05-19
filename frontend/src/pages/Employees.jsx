@@ -25,7 +25,8 @@ export default function Employees() {
     try {
 
       const res = await fetch(
-        "https://administrative-system.onrender.com/employees",
+        "https://administrative-system-b3in.onrender.com/employees",
+        //"https://administrative-system.onrender.com/employees",
         //"http://localhost:3000/employees",
         {
           headers: {
@@ -58,7 +59,8 @@ export default function Employees() {
     try {
 
       const res = await fetch(
-        `https://administrative-system.onrender.com/employees/search?nombre=${search}`,
+        `https://administrative-system-b3in.onrender.com/employees/search?nombre=${search}`,
+        //`https://administrative-system.onrender.com/employees/search?nombre=${search}`,
         //`http://localhost:3000/employees/search?nombre=${search}`,
         {
           headers: {
@@ -85,7 +87,8 @@ export default function Employees() {
     try {
 
       await fetch(
-         "https://administrative-system.onrender.com/employees",
+        "https://administrative-system-b3in.onrender.com/employees", 
+        //"https://administrative-system.onrender.com/employees",
         //"http://localhost:3000/employees",
         {
           method: "POST",
@@ -129,7 +132,8 @@ export default function Employees() {
     try {
 
       await fetch(
-        `https://administrative-system.onrender.com/employees/${id}`,
+        `https://administrative-system-b3in.onrender.com/employees/${id}`,
+        //`https://administrative-system.onrender.com/employees/${id}`,
         //`http://localhost:3000/employees/${id}`,
         {
           method: "DELETE",
@@ -156,7 +160,8 @@ export default function Employees() {
     try {
 
       await fetch(
-         `https://administrative-system.onrender.com/employees/${editingId}`,
+        `https://administrative-system-b3in.onrender.com/employees/${editingId}`, 
+        //`https://administrative-system.onrender.com/employees/${editingId}`,
         //`http://localhost:3000/employees/${editingId}`,
         {
           method: "PUT",
