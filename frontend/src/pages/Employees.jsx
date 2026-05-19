@@ -25,7 +25,8 @@ export default function Employees() {
     try {
 
       const res = await fetch(
-        "http://localhost:3000/employees",
+        "https://administrative-system.onrender.com/employees",
+        //"http://localhost:3000/employees",
         {
           headers: {
             Authorization: `Bearer ${token}`
