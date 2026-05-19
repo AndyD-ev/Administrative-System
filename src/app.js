@@ -6,7 +6,12 @@ const employeeRoutes = require("./routes/employeeRoutes")
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: [
+    "https://administrative-system.vercel.app",
+    "https://administrative-system-a4g36e0eq-andyd-evs-projects.vercel.app"
+  ]
+}))
 
 app.use(express.json())
 
