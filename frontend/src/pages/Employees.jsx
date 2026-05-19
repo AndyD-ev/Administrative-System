@@ -58,7 +58,8 @@ export default function Employees() {
     try {
 
       const res = await fetch(
-        `http://localhost:3000/employees/search?nombre=${search}`,
+        `https://administrative-system.onrender.com/employees/search?nombre=${search}`,
+        //`http://localhost:3000/employees/search?nombre=${search}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -84,7 +85,8 @@ export default function Employees() {
     try {
 
       await fetch(
-        "http://localhost:3000/employees",
+         "https://administrative-system.onrender.com/employees",
+        //"http://localhost:3000/employees",
         {
           method: "POST",
 
@@ -127,7 +129,8 @@ export default function Employees() {
     try {
 
       await fetch(
-        `http://localhost:3000/employees/${id}`,
+        `https://administrative-system.onrender.com/employees/${id}`,
+        //`http://localhost:3000/employees/${id}`,
         {
           method: "DELETE",
 
@@ -153,7 +156,8 @@ export default function Employees() {
     try {
 
       await fetch(
-        `http://localhost:3000/employees/${editingId}`,
+         `https://administrative-system.onrender.com/employees/${editingId}`,
+        //`http://localhost:3000/employees/${editingId}`,
         {
           method: "PUT",
 
